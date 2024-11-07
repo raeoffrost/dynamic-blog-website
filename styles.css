@@ -1,0 +1,72 @@
+/* Variables */
+:root{
+    /* color */
+    --primary: #3d7c99;
+    --prime-hover: #4f8daa;
+    --secondary: #a21447;
+    --second-hover: #c72862;
+    /* style */
+    --shadow-on: box-shadow: 0px 0px 3px 2px #000000b0;
+    --shadow-off: box-shadow: 0px 0px 0px 0px #00000081;
+    --border-off: 0px; 
+    }
+    
+    /* Buttons */
+    
+    .btn{
+        box-shadow: var(--shadow-off); 
+        border: var(--border-off);
+    }
+    .btn:hover{
+        box-shadow: var(--shadow-on);
+    }
+    .btn:active{
+        box-shadow: var(--shadow-off);
+        border: var(--border-off);
+    }
+    .save-btn {
+        background-color: var(--primary);
+    }
+    .save-btn:hover {
+        background-color:var(--prime-hover); 
+    }
+    .save-btn:active {
+        background-color: var(--prime-hover);   
+    }
+    .clear-btn {
+        background-color: var(--secondary);
+    }
+    .clear-btn:hover {
+        background-color: var(--second-hover); 
+    }
+    .clear-btn:active {
+        background-color: var(--second-hover); 
+    }
+
+    /* page */
+
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    .post-list{
+        max-width: 1920px;
+        min-width: 20vw;
+        border: #3d7c99 1px solid;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .posts{
+        padding: 10px;
+        margin: 10px;
+        text-align: left;
+    }
