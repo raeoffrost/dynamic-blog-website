@@ -1,0 +1,4 @@
+Develop a dynamic, multi-page blog website with CRUD functionality for blog posts.
+    Create three main pages: index.html (Homepage), new-post.html (Create Post), and post.html (View/Edit Post).
+
+Use JavaScript to manage posts within the browser's local storage and CRUD operations.
