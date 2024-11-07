@@ -43,7 +43,7 @@
         background-color: var(--second-hover); 
     }
 
-    /* page */
+    /* homepage */
 
     h1{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -68,5 +68,18 @@
     .posts{
         padding: 10px;
         margin: 10px;
+        text-align: left;
+    }
+
+    /* add post */
+
+    form{
+        border: #3d7c99 1px solid;
+        display:flex;
+        flex-direction: column;
+        margin:10px;
+        padding: 10px;
+        gap: 20px;
+        justify-content: flex-start;
         text-align: left;
     }
