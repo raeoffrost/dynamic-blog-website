@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <script src="main.js" defer></script> 
+    <title>Assignment 3: New Post</title>
+</head>
+    <body>
+        <div class="wrap">
+            <section>
+                <div>
+                    <h1>Add Posts</h1>
+                </div>
+                <div class="post-add" id="post-add">
+                   <form v>
+                    <label>Title</label>
+                    <input type="text" name="title" aria-label="Title" id="title" required>
+                    <label>Post Body</label>
+                    <textarea name="body" aria-label="Post Body" rows="4" cols="50" id="body" required></textarea>
+                    <label>Optional: Image Upload</label>
+                    <input type="file" name="image" aria-label="Optional: Image Upload" id="image">
+                    <input type="submit" value="Submit" aria-label="Submit"  id="save-btn" onclick="savePost()">
+                   </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
