@@ -20,6 +20,7 @@
         color: #a8ccdd;
         font-weight: bold;
         font-size: large;
+        color:#fff;
     }
     .btn:hover{
         box-shadow: var(--shadow-on);
@@ -38,13 +39,14 @@
         background-color: var(--prime-hover);   
     }
 
-    .clear-btn {
+    .delete-btn {
         background-color: var(--secondary);
+        width: 100%;
     }
-    .clear-btn:hover {
+    .delete-btn:hover {
         background-color: var(--second-hover); 
     }
-    .clear-btn:active {
+    .delete-btn:active {
         background-color: var(--second-hover); 
     }
 
@@ -113,3 +115,14 @@
         text-align: left;
         min-height: 20px;
     }
+/* delete post */
+
+.postDelete{
+    border: #3d7c99 1px solid;
+    background-color: #dda8b5;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+    min-height: 20px;
+    font-weight: bold;
+}
