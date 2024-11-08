@@ -1,25 +1,52 @@
+const title = document.getElementById("title");
+const body = document.getElementById("body");
+const image = document.getElementById("image");
+
 // print post to html
 
 const currentTitle = document.getElementById("currentTitle");
 const currentBody = document.getElementById("currentBody");
 const currentImage = document.getElementById("currentImage");
+let postID = "";
+let array = JSON.parse(localStorage.getItem("tmpKey"));
+let url = location.search;
 
 window.onload = (event) => {
+    for (var i = 0; i < array.length; i++){ 
+        if (url === "?" + array[i].title){
+            postID = i;
+        }
+    }
     displayPost();
   };
 
+// Button functions 
+document.getElementById("update-btn").addEventListener("click", updatePost);
+document.getElementById("delete-btn").addEventListener("click", deletePost);
+
 function displayPost() {
-        let x = location.search;
-        let y = JSON.parse(localStorage.getItem("tmpKey"));
-    for (var i = 0; i < y.length; i++){ 
-        if (x === "?" + y[i].title){
-            currentTitle.innerHTML =  y[i].title;
-            currentBody.innerHTML =  y[i].body;
-            currentImage.innerHTML =  y[i].image;
-            console.log("test good")
-            break;
-        } else {currentTitle.innerHTML = "bad test";
-            console.log("test bad")
-        }
+        currentTitle.innerHTML =  array[postID].title;
+        currentBody.innerHTML =  array[postID].body;
+        currentImage.innerHTML =  array[postID].image;
+    } 
+
+function updatePost(){
+    if (title.value.length > 0){
+        array[postID].title = title.value;
     }
+    if (body.value.length > 0){
+        array[postID].body = body.value;
+    }
+    if (image.value){
+        
+        array[postID].image = image.value;
+        image.innerHTML = `${array[postID].image}`;
+    }
+    localStorage.setItem("tmpKey", JSON.stringify(array));
+}
+
+function deletePost(){
+    console.log(postID);
+    array.splice(postID, 1);
+    localStorage.setItem("tmpKey", JSON.stringify(array));
 }

@@ -21,7 +21,6 @@ function post(title, body, image){
 
 // Button functions 
 document.getElementById("save-btn").addEventListener("click", savePost);
-// document.getElementById("display-btn").addEventListener("click", displayPost);
 // document.getElementById("clear-btn").addEventListener("click", clearPost);
 
 let tmpArray = localStorage.getItem("tmpKey") ? JSON.parse(localStorage.getItem("tmpKey")) : [];
