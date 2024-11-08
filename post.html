@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-     <script src="main.js" defer></script> 
+     <script src="viewPost.js" defer></script> 
     <title>Assignment 3: Edit and View Post</title>
 </head>
     <body>
@@ -14,7 +14,7 @@
                 <div>
                     <h1>View & Edit Posts</h1>
                     <p>Add Post ID to URL to view and edit content</p>
-                    <p>Example: example.com/post.html#001</p>
+                    <p>Example: example.com/post.html?001</p>
                 </div>
                 <div class="wrap-edit">
                     <div class="postView" id="postView">                      
@@ -35,11 +35,11 @@
                         <textarea name="body" aria-label="Update Post Body" rows="4" cols="50" id="body"></textarea>
                         <label>Replace Image Upload</label>
                         <input type="file" name="image" aria-label="Optional: Image Upload" id="image">
-                        <input type="submit" value="Update" aria-label="Update" class="btn update-btn" id="update-btn" onclick="updatePost()">
+                        <input type="submit" value="Update" aria-label="Update" class="btn update-btn" id="update-btn">
                        </form>
                        <div class="postDelete">   
                         <p>Permenently Delete Current Post</p>                     
-                        <input type="submit" value="Delete" aria-label="Delete" class="btn delete-btn" id="delete-btn" onclick="deletePost()">
+                        <input type="submit" value="Delete" aria-label="Delete" class="btn delete-btn" id="delete-btn">
                     </div>
                     </div>
                 </div>
