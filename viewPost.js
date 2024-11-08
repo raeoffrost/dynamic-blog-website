@@ -6,7 +6,7 @@ const image = document.getElementById("image");
 
 const currentTitle = document.getElementById("currentTitle");
 const currentBody = document.getElementById("currentBody");
-const currentImage = document.getElementById("currentImage");
+const currentImage = document.getElementById("currentImg");
 let postID = "";
 let array = JSON.parse(localStorage.getItem("tmpKey"));
 let url = location.search;
@@ -38,9 +38,7 @@ function updatePost(){
         array[postID].body = body.value;
     }
     if (image.value){
-        
-        array[postID].image = image.value;
-        image.innerHTML = `${array[postID].image}`;
+        array[postID].image = image.value;  
     }
     localStorage.setItem("tmpKey", JSON.stringify(array));
 }
