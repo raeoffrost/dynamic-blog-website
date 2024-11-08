@@ -9,19 +9,20 @@
 </head>
     <body>
         <div class="wrap">
+            <nav><a href="index.html">Home</a>  <a href="new-post.html"  active>New Post</a> <a href="post.html">View & Edit Post</a></nav>
             <section>
                 <div>
                     <h1>Add Posts</h1>
                 </div>
-                <div class="post-add" id="post-add">
-                   <form v>
+                <div class="postAdd">
+                   <form id="postAdd">
                     <label>Title</label>
                     <input type="text" name="title" aria-label="Title" id="title" required>
                     <label>Post Body</label>
                     <textarea name="body" aria-label="Post Body" rows="4" cols="50" id="body" required></textarea>
                     <label>Optional: Image Upload</label>
                     <input type="file" name="image" aria-label="Optional: Image Upload" id="image">
-                    <input type="submit" value="Submit" aria-label="Submit"  id="save-btn" onclick="savePost()">
+                    <input type="submit" value="Submit" aria-label="Submit" class="btn save-btn" id="save-btn" onclick="savePost()">
                    </form>
                 </div>
             </section>

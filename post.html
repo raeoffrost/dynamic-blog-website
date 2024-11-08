@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <script src="main.js" defer></script> 
+    <title>Assignment 3: Edit and View Post</title>
+</head>
+    <body>
+        <div class="wrap">
+            <nav><a href="index.html">Home</a>  <a href="new-post.html">New Post</a> <a href="post.html"  active>View & Edit Post</a></nav>
+            <section>
+                <div>
+                    <h1>View & Edit Posts</h1>
+                    <p>Add Post ID to URL to view and edit content</p>
+                    <p>Example: example.com/post.html#001</p>
+                </div>
+                <div class="wrap-edit">
+                    <div class="postView" id="postView">                      
+                        <h2>Current Title</h2>
+                        <p id="currentTitle">What is Lorem Ipsum?</p>
+                        <h2>Current Body</h2>
+                        <p id="currentBody">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            </p>
+                        <h2>Current Image</h2>
+                        <p id="currentImg">No Current Image</p>
+                    </div>
+                    <div class="postEdit" id="postEdit">
+                       <form>
+                        <label>Update Title</label>
+                        <input type="text" name="title" aria-label="Update Title" id="title">
+                        <label>Update Post Body</label>
+                        <textarea name="body" aria-label="Update Post Body" rows="4" cols="50" id="body"></textarea>
+                        <label>Replace Image Upload</label>
+                        <input type="file" name="image" aria-label="Optional: Image Upload" id="image">
+                        <input type="submit" value="Update" aria-label="Update" class="btn update-btn" id="update-btn" onclick="updatePost()">
+                       </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
